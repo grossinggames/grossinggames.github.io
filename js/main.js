@@ -49,7 +49,9 @@ window.onload = function () {
         var group = 0;
         var photo = "";
 
-        var socket     = new WebSocket("wss://" + window.location.hostname + ":" + window.location.port);
+        //var socket     = new WebSocket("wss://" + window.location.hostname + ":" + window.location.port);
+        var socket     = new WebSocket("wss://194.87.234.146:8000");
+
         socket.onopen  = function() {
             //console.log("Websocket connect");
             VK.api("users.get", {fields: "photo_100"}, function(data) { 
